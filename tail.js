@@ -25,16 +25,14 @@ const assertEqual = function(actual, expected) {
   }
 };
 
+const tail = function(arrVal) {
+  arrVal.shift();
+  return arrVal;
+};
 
-const eqArrays= function(arr1, arr2)
-{
-  let arrEq = true;
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i])     {
-      arrEq = false;
-      break;
-    }
-  }
-  return arrEq;
-}
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+// TEST CODE
+const result = tail(["Hello", "Lighthouse", "Labs"]);
+assertEqual(result, ["Lighthouse"]); // => will always fail!
+assertEqual(result.length, 1); // ensure we get back two elements
+assertEqual(result[0], "Lighthouse"); // ensure first element is "Lighthouse"
+assertEqual(result[1], "Labs");

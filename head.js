@@ -16,7 +16,7 @@ const assertEqual = function(actual, expected) {
     console.log(`🛑🛑🛑 Assertion Failed: ${actual} !== ${expected}`);
       //console.assert(actual === expected, actual + '!==' + expected);
   }
-  else // this else covers if we have to use it with head function
+  else
   {
     if (actual === expected)
       console.log(`✅✅✅ Assertion passed: ${actual} === ${expected}`);
@@ -26,15 +26,10 @@ const assertEqual = function(actual, expected) {
 };
 
 
-const eqArrays= function(arr1, arr2)
-{
-  let arrEq = true;
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i])     {
-      arrEq = false;
-      break;
-    }
-  }
-  return arrEq;
-}
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+const head = function(arrVal) {
+  return arrVal[0];
+};
+
+// TEST CODE
+assertEqual(head([5,6,7]), 4);
+assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");

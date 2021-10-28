@@ -17,5 +17,9 @@ const assertArraysEqual = function(arr1, arr2)
 }
 
 
-console.log(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
-console.log(eqArrays([1, 2, 3], [1, 2, 2]), true); // => should Fail
+
+console.log(eqArrays([1, 2, 3], [1, 2, 3])); // => should PASS
+console.log(eqArrays([1, 2, 3], [1, 2, 2])); // => should Fail
+console.log(eqArrays([1, 2, 2, 2, 4], [1, 2, 2, 2, 4])); // => should PASS
+
+
