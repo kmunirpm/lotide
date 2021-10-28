@@ -3,14 +3,7 @@ const assertEqual = function(actual, expected) {
     console.log("✅✅✅ Assertion passed: " + actual + " === " + expected);
   else
     console.log("🛑🛑🛑 Assertion Failed: " + actual + " !== " + expected);
-    //console.assert(actual === expected, actual + '!==' + expected);
 };
-
-// TEST CODE
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual("Bootcamp", "Bootcamp");
-assertEqual(1, 1);
-assertEqual(1, 2);
 
 // allItems: an array of strings that we need to look through
 // itemsToCount: an object specifying what to count
@@ -20,17 +13,12 @@ const countOnly = function(allItems, itemsToCount) {
   {
     let attribute = val;
     if (itemsToCount[attribute] === true){
-      console.log(val, itemsToCount[attribute])
-      console.log(typeof retObj[attribute])
-      
       if (typeof retObj[attribute] === "number")
         retObj[attribute]+=1
       else
         retObj[attribute]=1
     }
-
   }
-  console.log(retObj);
   return retObj;
 }
 
